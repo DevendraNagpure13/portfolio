@@ -1,1 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Devendra Nagpure | Research Portfolio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           HEADER
+           ========================================= */
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .profile-header {
+
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                160px
+                1fr
+                160px;
+
+            align-items: center;
+
+            min-height: 180px;
+        }
+
+
+        /* Profile photo */
+
+        .profile-left {
+            text-align: left;
+        }
+
+        .profile-photo {
+
+            width: 130px;
+            height: 130px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            object-position: center 35%;
+
+            border: 4px solid white;
+        }
+
+
+        /* Center information */
+
+        .profile-center {
+            text-align: center;
+        }
+
+        .profile-center h1 {
+
+            margin: 0;
+
+            font-size: 38px;
+
+            letter-spacing: 0.5px;
+        }
+
+        .profile-center p {
+
+            margin-top: 10px;
+
+            font-size: 17px;
+
+            color: #d1d5db;
+        }
+
+
+        /* Right buttons */
+
+        .profile-right {
+            text-align: right;
+        }
+
+        .profile-button {
+
+            display: block;
+
+            width: fit-content;
+
+            margin-left: auto;
+
+            padding: 10px 18px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+        }
+
+
+        .linkedin-button {
+
+            background: white;
+
+            color: #2563eb;
+        }
+
+
+        .portfolio-button {
+
+            background: #2563eb;
+
+            color: white;
+        }
+
+
+        .profile-button:hover {
+
+            opacity: 0.85;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+
+        nav {
+
+            background: white;
+
+            border-bottom: 1px solid #ddd;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .nav-container {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            padding: 14px 20px;
+        }
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #333;
+
+            font-weight: 600;
+
+            font-size: 15px;
+        }
+
+        nav a:hover {
+
+            color: #2563eb;
+        }
+
+
+        /* =========================================
+           GENERAL SECTIONS
+           ========================================= */
+
+        .container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 0 20px;
+        }
+
+
+        section {
+
+            padding: 70px 0;
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-line {
+
+            width: 60px;
+
+            height: 3px;
+
+            background: #2563eb;
+
+            margin: 0 auto 40px auto;
+        }
+
+
+        /* =========================================
+           ABOUT
+           ========================================= */
+
+        .about-text {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+
+            font-size: 17px;
+
+            color: #555;
+        }
+
+
+        /* =========================================
+           RESEARCH
+           ========================================= */
+
+        .research-card {
+
+            background: white;
+
+            border-radius: 12px;
+
+            padding: 30px;
+
+            margin-bottom: 40px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.07);
+        }
+
+
+        .research-card h3 {
+
+            font-size: 25px;
+
+            margin-top: 0;
+
+            margin-bottom: 10px;
+        }
+
+
+        .research-description {
+
+            color: #555;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================================
+           RESEARCH IMAGE
+           ========================================= */
+
+        .research-image {
+
+            width: 100%;
+
+            max-height: 550px;
+
+            object-fit: contain;
+
+            border-radius: 8px;
+
+            display: block;
+
+            margin: 20px auto;
+        }
+
+
+        /* =========================================
+           YOUTUBE VIDEO
+           ========================================= */
+
+        .video-container {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 900px;
+
+            margin: 25px auto;
+
+            aspect-ratio: 16 / 9;
+        }
+
+
+        .video-container iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: none;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================================
+           LINKS
+           ========================================= */
+
+        .research-links {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+
+        .research-links a {
+
+            text-decoration: none;
+
+            padding: 9px 16px;
+
+            border-radius: 6px;
+
+            background: #eef2ff;
+
+            color: #2563eb;
+
+            font-weight: 600;
+
+            font-size: 14px;
+        }
+
+
+        .research-links a:hover {
+
+            background: #2563eb;
+
+            color: white;
+        }
+
+
+        /* =========================================
+           SKILLS
+           ========================================= */
+
+        .skills {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+
+        .skill {
+
+            background: white;
+
+            padding: 10px 18px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.06);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           PUBLICATIONS
+           ========================================= */
+
+        .publication {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 3px 12px rgba(0,0,0,0.06);
+        }
+
+
+        .publication h3 {
+
+            margin-top: 0;
+
+            margin-bottom: 8px;
+        }
+
+
+        .publication p {
+
+            color: #666;
+        }
+
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+
+        footer {
+
+            background: #1f2937;
+
+            color: #d1d5db;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            margin-top: 30px;
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 700px) {
+
+            .profile-header {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                gap: 15px;
+            }
+
+
+            .profile-left,
+            .profile-center,
+            .profile-right {
+
+                text-align: center;
+            }
+
+
+            .profile-left {
+
+                order: 1;
+            }
+
+
+            .profile-center {
+
+                order: 2;
+            }
+
+
+            .profile-right {
+
+                order: 3;
+            }
+
+
+            .profile-button {
+
+                margin: 0 auto 12px auto;
+            }
+
+
+            .profile-center h1 {
+
+                font-size: 30px;
+            }
+
+
+            .profile-center p {
+
+                font-size: 15px;
+            }
+
+
+            .nav-container {
+
+                gap: 15px;
+
+                overflow-x: auto;
+
+                justify-content: flex-start;
+            }
+
+
+            section {
+
+                padding: 50px 0;
+            }
+
+
+            .research-card {
+
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+     ========================================= -->
+
+<header>
+
+    <div class="profile-header">
+
+
+        <!-- PHOTO -->
+
+        <div class="profile-left">
+
+            <img src="images/profile.jpg"
+                 alt="Devendra Nagpure"
+                 class="profile-photo">
+
+        </div>
+
+
+        <!-- NAME -->
+
+        <div class="profile-center">
+
+            <h1>
+                Devendra Nagpure
+            </h1>
+
+            <p>
+                Ph.D. Researcher | Computational Mechanics |
+                Material Modeling | Advanced Manufacturing
+            </p>
+
+        </div>
+
+
+        <!-- LINKS -->
+
+        <div class="profile-right">
+
+            <a href="YOUR_LINKEDIN_URL"
+               target="_blank"
+               class="profile-button linkedin-button">
+
+                LinkedIn
+
+            </a>
+
+
+            <a href="YOUR_CV_URL"
+               target="_blank"
+               class="profile-button portfolio-button">
+
+                CV
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     NAVIGATION
+     ========================================= -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#research">
+            Research
+        </a>
+
+        <a href="#skills">
+            Skills
+        </a>
+
+        <a href="#publications">
+            Publications
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================
+     ABOUT
+     ========================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About
+        </h2>
+
+        <div class="section-line"></div>
+
+
+        <div class="about-text">
+
+            <p>
+
+                I am a researcher working on computational and
+                experimental approaches to understand the mechanical
+                behaviour of advanced materials and manufacturing
+                processes.
+
+            </p>
+
+            <p>
+
+                My work combines experiments, finite element modeling,
+                material characterization, numerical computation and
+                constitutive modeling.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     RESEARCH
+     ========================================= -->
+
+<section id="research">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Research
+        </h2>
+
+        <div class="section-line"></div>
+
+
+
+        <!-- RESEARCH ITEM 1 -->
+
+        <div class="research-card">
+
+            <h3>
+                Electrical-Assisted Deformation
+            </h3>
+
+
+            <p class="research-description">
+
+                Research on the mechanical response of materials
+                under electrical loading, including deformation,
+                internal stress evolution and electrically assisted
+                plasticity.
+
+            </p>
+
+
+            <!-- IMAGE -->
+
+            <img src="images/research-1.jpg"
+                 alt="Electrical-assisted deformation research"
+                 class="research-image">
+
+
+            <!-- YOUTUBE VIDEO -->
+
+            <div class="video-container">
+
+                <iframe
+                    src="YOUR_YOUTUBE_EMBED_LINK"
+                    title="Research Video"
+                    allow="accelerometer;
+                           autoplay;
+                           clipboard-write;
+                           encrypted-media;
+                           gyroscope;
+                           picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <!-- EXTERNAL LINKS -->
+
+            <div class="research-links">
+
+                <a href="YOUR_PAPER_LINK"
+                   target="_blank">
+
+                    Research Paper
+
+                </a>
+
+
+                <a href="YOUR_DOI_LINK"
+                   target="_blank">
+
+                    DOI
+
+                </a>
+
+
+                <a href="YOUR_GITHUB_LINK"
+                   target="_blank">
+
+                    Code
+
+                </a>
+
+
+                <a href="YOUR_DATA_LINK"
+                   target="_blank">
+
+                    Data
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RESEARCH ITEM 2 -->
+
+        <div class="research-card">
+
+            <h3>
+                Finite Element Modeling
+            </h3>
+
+
+            <p class="research-description">
+
+                Numerical modeling of material deformation and
+                manufacturing processes using finite element methods
+                and nonlinear constitutive models.
+
+            </p>
+
+
+            <img src="images/research-2.jpg"
+                 alt="Finite element simulation"
+                 class="research-image">
+
+
+            <!-- VIDEO -->
+
+            <div class="video-container">
+
+                <iframe
+                    src="YOUR_YOUTUBE_EMBED_LINK"
+                    title="Finite Element Simulation"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <div class="research-links">
+
+                <a href="YOUR_PROJECT_LINK"
+                   target="_blank">
+
+                    Project
+
+                </a>
+
+
+                <a href="YOUR_GITHUB_LINK"
+                   target="_blank">
+
+                    Code
+
+                </a>
+
+
+                <a href="YOUR_PAPER_LINK"
+                   target="_blank">
+
+                    Paper
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ADD MORE RESEARCH ITEMS HERE -->
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SKILLS
+     ========================================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
+
+        <div class="section-line"></div>
+
+
+        <div class="skills">
+
+            <div class="skill">
+                Abaqus
+            </div>
+
+            <div class="skill">
+                ANSYS
+            </div>
+
+            <div class="skill">
+                Finite Element Analysis
+            </div>
+
+            <div class="skill">
+                Python
+            </div>
+
+            <div class="skill">
+                MATLAB
+            </div>
+
+            <div class="skill">
+                UMAT Development
+            </div>
+
+            <div class="skill">
+                Material Modeling
+            </div>
+
+            <div class="skill">
+                Numerical Computation
+            </div>
+
+            <div class="skill">
+                Material Characterization
+            </div>
+
+            <div class="skill">
+                Optimization
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PUBLICATIONS
+     ========================================= -->
+
+<section id="publications">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Publications
+        </h2>
+
+        <div class="section-line"></div>
+
+
+        <!-- PUBLICATION 1 -->
+
+        <div class="publication">
+
+            <h3>
+                Publication Title Goes Here
+            </h3>
+
+            <p>
+
+                Authors · Journal · Year
+
+            </p>
+
+
+            <div class="research-links">
+
+                <a href="YOUR_DOI_LINK"
+                   target="_blank">
+
+                    DOI
+
+                </a>
+
+
+                <a href="YOUR_PAPER_LINK"
+                   target="_blank">
+
+                    Paper
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PUBLICATION 2 -->
+
+        <div class="publication">
+
+            <h3>
+                Another Publication Title
+            </h3>
+
+            <p>
+
+                Authors · Journal · Year
+
+            </p>
+
+
+            <div class="research-links">
+
+                <a href="YOUR_DOI_LINK"
+                   target="_blank">
+
+                    DOI
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer>
+
+    <p>
+        © 2026 Devendra Nagpure
+    </p>
+
+    <p>
+        Research Portfolio
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
